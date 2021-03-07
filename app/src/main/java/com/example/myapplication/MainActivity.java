@@ -19,9 +19,7 @@ Button bt;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edt1 = findViewById(R.id.edt1);
-        edt2 = findViewById(R.id.edt2);
-        edt3 = findViewById(R.id.edt3);
+        anhXa();
         bt = findViewById(R.id.bt);
         bt.setOnClickListener(this);
 
@@ -29,11 +27,21 @@ Button bt;
 
     }
 
+    private void anhXa() {
+        edt1 = findViewById(R.id.edt1);
+        edt2 = findViewById(R.id.edt2);
+        edt3 = findViewById(R.id.edt3);
+    }
+
     @Override
     public void onClick(View v) {
+        getEdittext();
+
+    }
+
+    private void getEdittext() {
         String a = edt1.getText().toString();
         String b = edt2.getText().toString();
         String c = edt3.getText().toString();
-
     }
 }
